@@ -5,20 +5,36 @@ var makeHashTable = function() {
     return {
       _storage: [],
       retrieve: function(key) {
-        return this._storage[hashFn(key, max)];
+        var index=hashFn(key, max);
+        return this._storage[index];
+
+        var index =hashFn(key, max);
+        if (this._storage[index] === undefined ) {
+        return false;
+        }
+        else{
+        //this._storage [index] = value;
+        for (var i = 0; i < this_storage.bucket.length; i++) {
+          if (this_storage.bucket[i]) {
+            return true;
+          }
+        }
+
       },
 
       insert: function(key, value) {
         //your code is here
-        var index= hashFn(key,max);
-        this._storage[hashFn(key, max)] = value;
-        var bucket = this._storage[index];
-        if (bucket) {
-          bucket = [];
+        var index =hashFn(key, max);
+        if (this._storage[index] === undefined ) {
+          var bucket = [];
         }
-        else {
+        else{
+        //this._storage [index] = value;
+        var p = [value,key];
+        bucket.push(p);
+        this._storage [index] = bucket;
+        }
 
-        }
     }
   }
 };

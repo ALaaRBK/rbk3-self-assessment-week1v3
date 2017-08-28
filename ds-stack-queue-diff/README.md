@@ -3,3 +3,5 @@
 
 ## Queue vs. Stack
 Please write your explanation below.
+Queue : it's line to do something like whin you want buy something from superMarket(FIFO)
+Stack: 	like when you but paper over some  	(FILO)
